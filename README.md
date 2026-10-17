@@ -1,72 +1,13 @@
-# test-manager-library-3413974-docs
+# Manager Library · Documentación
 
-> **Prueba técnica · Ficha ADSO 3413974**
-> Horario: de **9:15 a. m. a 3:00 p. m.** (15:00). Después, **feria de presentación** de cada proyecto.
+Especificación y decisiones de *Manager Library*, un sistema para que una biblioteca pequeña lleve su
+catálogo, sus socios y sus préstamos, y vea qué libros se prestan más.
 
-Este repositorio contiene el **spec** de *Manager Library*. Es el único con contenido: los otros cinco empiezan vacíos.
-
-## Instrucciones
-
-Cada aprendiz debe **crear el fork** de los seis repositorios del proyecto y **resolver el proyecto
-con el spec planteado**.
-
-1. Hacer fork, a su cuenta de GitHub, de cada repositorio de la tabla del final.
-2. Leer el spec en [`test-manager-library-3413974-docs`](https://github.com/code-sena/test-manager-library-3413974-docs).
-   Se entrega en dos versiones: `spec-python/` y `spec-.net/`.
-3. Desarrollar en los forks.
-
-## El reto se desarrolla con React y PHP (Laravel)
-
-El spec está escrito para Python y para .NET, pero el reto **no** se hace en esos lenguajes:
-
-| Capa | Tecnología del reto |
+| Documento | Contenido |
 |---|---|
-| Frontend | React |
-| Backend | PHP con Laravel |
+| [`spec-python/`](spec-python/) | El spec: constitución, historias de usuario, contrato de la API, modelo de datos, arquitectura, plan, tareas y ADR |
+| [`spec-.net/`](spec-.net/) | La misma especificación con el vocabulario de .NET |
+| [`adaptacion-react-laravel.md`](adaptacion-react-laravel.md) | Cómo se lleva el spec a Laravel y React, decisiones propias y trazabilidad historia → código → prueba |
 
-Lo que el spec define sobre el negocio —historias, criterios de aceptación, reglas, contrato de la
-API, modelo de datos— se respeta. Lo que define sobre la tecnología se traduce a React y Laravel.
-
-## La prueba no consiste en escribir el código
-
-El propósito principal es ver la **capacidad de desempeño con SDD** (*Spec-Driven Development*,
-desarrollo guiado por especificación): cómo se lee, se interpreta y se aplica una especificación
-para llevarla a un stack distinto. El código es el medio, no el fin.
-
-## Feria de presentación
-
-Al cerrar la prueba (3:00 p. m.) cada aprendiz **presenta su proyecto** al grupo: qué construyó del spec, qué dejó fuera y por qué,
-y una demostración corta de lo que funciona (la aplicación y el sitio público). Lo que se presenta es lo que quedó **subido a los forks
-antes de las 3:00 p. m.**: no se presenta nada que no esté en GitHub.
-
-## Qué contiene este repositorio
-
-| Carpeta | Contenido |
-|---|---|
-| [`spec-python/`](spec-python/) | El spec de Manager Library escrito para un backend Python |
-| [`spec-.net/`](spec-.net/) | El mismo sistema especificado para un backend .NET |
-
-Las dos versiones describen el **mismo producto** (las mismas historias, reglas de negocio y
-endpoints); cambian las decisiones de tecnología. Ninguna de las dos es el stack del reto.
-
-## Cómo se lee el spec
-
-En cualquiera de las dos carpetas, en este orden:
-
-1. `constitution.md` — principios innegociables.
-2. `spec.md` — qué debe hacer el sistema: actores, historias, criterios de aceptación, reglas de negocio.
-3. `plan.md`, `architecture.md` y `arquitectura-panoramica.md` — cómo se construye.
-4. `data-model.md` y `api-contract.md` — el modelo de datos y el contrato de la API.
-5. `tasks.md` — qué hay que hacer y con qué evidencia se da por hecho.
-6. `adr/` — las decisiones de arquitectura, con sus alternativas y consecuencias.
-
-## Los seis repositorios
-
-| Repositorio | Qué va ahí |
-|---|---|
-| [`test-manager-library-3413974-docs`](https://github.com/code-sena/test-manager-library-3413974-docs) | El spec: `spec-python/` y `spec-.net/` |
-| [`test-manager-library-3413974-api`](https://github.com/code-sena/test-manager-library-3413974-api) | Backend en PHP (Laravel) |
-| [`test-manager-library-3413974-app`](https://github.com/code-sena/test-manager-library-3413974-app) | Frontend en React |
-| [`test-manager-library-3413974-page`](https://github.com/code-sena/test-manager-library-3413974-page) | Sitio público estático de presentación |
-| [`test-manager-library-3413974-infra`](https://github.com/code-sena/test-manager-library-3413974-infra) | Contenedores, red, volúmenes y motor de base de datos vacío |
-| [`test-manager-library-3413974-tool`](https://github.com/code-sena/test-manager-library-3413974-tool) | Utilidades: sembrador de datos de demostración |
+El negocio (HU-01 a HU-10, RN-1 a RN-6, contrato de la API y modelo de datos) es el mismo para cualquier
+lenguaje. El modelo de datos vive solo en `data-model.md` y el contrato HTTP solo en `api-contract.md`.
